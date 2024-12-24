@@ -25,7 +25,7 @@ export async function load({ params }) {
     	
 		const Posts = await getPosts()
 		const posts = Posts.filter((post) => !((post.categories.includes("News"))||(post.slug.includes(params.slug))))
-		shuffleArray(posts)
+		//shuffleArray(posts)
 		let randomPosts = posts.slice(0,6)
 		
 		const title = post.title
