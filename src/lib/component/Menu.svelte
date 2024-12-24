@@ -54,30 +54,20 @@ function myFunction() {
                     <i class="fa fa-caret-down"></i>
                   </button>
                   <div class="dropdown-content">
-                    <a href="/national/1">ក្នុង​ប្រទេស</a>
-                    <a href="/news/1">ក្រៅ​ប្រទេស</a>
+                    <span>News</span>
+                    <span>News</span>
                   </div>
                 </div>
-                <a href="/opinion/1" class={`opinion ${opinion}`}>មតិ​យោបល់</a>
-                <a href="/doc/1" class={`doc ${doc}`}>ឯកសារ</a>
-                <a href="/sport/1" class={`sport ${sport}`}>កីឡា</a>
                 <div class={`dropdown ${movie}`}>
                   <button class={`dropbtn `}>ភាពយន្ត
                     <i class="fa fa-caret-down"></i>
                   </button>
                   <div class="dropdown-content">
-                    <a href="/Khmer/1">រឿង​ខ្មែរ</a>
-                    <a href="/Thai/1">រឿង​ថៃ</a>
-                    <a href="/Chinese/1">រឿង​ចិន</a>
-                    <a href="/Korean/1">រឿង​កូរ៉េ</a>
-                    <a href="/world/1">​រឿង​បរទេស</a>
-                    <a href="/movies/1">​ឥត​ព្រៀង​ទុក</a>
+                    <span>រឿង​ខ្មែរ</span>
+                    <span>រឿង​ថៃ</span>
+                    
                   </div>
                 </div>
-                <a href="/travel/1" class={`travel ${travel}`}>ដើរ​លេង</a>
-                <a href="/game/1" class={`game ${game}`}>ពិភព​និមិ្មត</a>
-                <a href="/page/66b17b1e944f187d47506cda" class={`contact ${contact}`}>ទំនាក់ទំនង</a>
-                <a href="/page/66b17b48944f187d47506cdc" class={`about ${about}`}>អំពីយើង​ខ្ញុំ</a>
                 <a href="javascript:void(0);" class="icon" onclick={myFunction}>
                     <i class="fa fa-bars"></i>
                 </a>
