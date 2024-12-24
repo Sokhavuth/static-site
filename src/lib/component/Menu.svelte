@@ -49,25 +49,6 @@ function myFunction() {
         <div class="region">
             <div data-sveltekit-reload class="topnav" class:responsive={isresponsive} id="myTopnav">
                 <a href="/" class={`home ${home}`}>ទំព័រ​ដើម</a>
-                <div class={`dropdown ${news}`}>
-                  <button class={`dropbtn `}>ព័ត៌មាន
-                    <i class="fa fa-caret-down"></i>
-                  </button>
-                  <div class="dropdown-content">
-                    <span>News</span>
-                    <span>News</span>
-                  </div>
-                </div>
-                <div class={`dropdown ${movie}`}>
-                  <button class={`dropbtn `}>ភាពយន្ត
-                    <i class="fa fa-caret-down"></i>
-                  </button>
-                  <div class="dropdown-content">
-                    <span>រឿង​ខ្មែរ</span>
-                    <span>រឿង​ថៃ</span>
-                    
-                  </div>
-                </div>
                 <a href="javascript:void(0);" class="icon" onclick={myFunction}>
                     <i class="fa fa-bars"></i>
                 </a>

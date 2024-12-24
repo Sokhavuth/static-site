@@ -4,7 +4,7 @@ date: 2024-12-24T01:41:10
 thumb: ''
 categories:
   - movie
-  - chinese
+  - Chinese
 videos: 
     # YouTube, YouTubePlaylist, Facebook, Dailymotion, Vimeo, OK
     - {type: YouTube, id: xxxx, status: ចប់}
