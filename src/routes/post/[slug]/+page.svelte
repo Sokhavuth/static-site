@@ -2,6 +2,19 @@
     import Layout from "$lib/component/Layout.svelte"
     import Video from "$lib/component/Video.svelte"
     let { data } = $props()
+    let randomPosts = $state([])
+
+    function shuffle(a) {
+        for (let i = a.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [a[i], a[j]] = [a[j], a[i]];
+        }
+    }
+    
+    $effect(() => {
+        shuffle(data.posts)
+        randomPosts = data.posts.slice(0,6)
+    })
     const Categories = {
         news: 'ព័ត៌មាន',
         national: 'ក្នុង​ប្រទេស',
@@ -47,7 +60,7 @@
         <div class="fb-comments" data-href={`https://khmerweb-news.netlify.app/post/${data.post.slug}`} data-width="100%" data-numposts="5"></div>
     </div>
     <div class="sidebar">
-        {#each data.randomPosts as post, i}
+        {#each randomPosts as post}
             <a  href="/post/{post.slug}">
                 <img src={post.thumb} alt=''/>
                 {#if post.videos.length>0}
