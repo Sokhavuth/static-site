@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="/images/siteLogo.png" rel="icon" ></link>
+		<link href="/fonts/setup.css" rel="stylesheet" />
+		<script>
+			window.fbAsyncInit = function() {
+			  FB.init({
+				appId            : '3414446958683475',
+				xfbml            : true,
+				version          : 'v21.0'
+			  });
+			};
+		</script>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover" data-sveltekit-reload>
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>
