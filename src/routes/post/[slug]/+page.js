@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit'
 import { getPosts } from '$lib/utils/get-posts'
 import setup from '$lib/settings';
-
+/*
 function shuffle(a) {
     for (let i = a.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -9,7 +9,7 @@ function shuffle(a) {
     }
     return a;
 }
-
+*/
 function shuffleArray(array) {
 	for (let i = array.length - 1; i > 0; i--) {
 		const j = Math.floor(Math.random() * (i + 1));
@@ -30,7 +30,7 @@ export async function load({ params }) {
 		
 		const title = post.title
 
-		return { post, settings, randomPosts, title }
+		return { post, settings, title }
 	} catch (e) {
 		error(404, `Could not find ${params.slug}`)
 	}

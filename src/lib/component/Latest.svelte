@@ -22,14 +22,14 @@
     <div class="posts">
         {#each posts as post}
             <div class="post">
-                <a class="thumb" href={`/post/${post.slug}`}>
+                <a class="thumb" href="/post/{post.slug}">
                     <img src={post.thumb} alt='' />
                     {#if post.videos.length>0 }
                     <img class="play-icon" src="/images/play.png"alt=''/>
                     {/if}
                 </a>
                 <div class="title-date">
-                    <a href={`/post/${post.slog}`} class="title">{post.title}</a>
+                    <a href="/post/{post.slug}" class="title">{post.title}</a>
                     <div>{(new Date(post.date)).toLocaleDateString("it-IT")}</div>
                 </div>
             </div>
