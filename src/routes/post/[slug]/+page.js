@@ -1,20 +1,13 @@
 import { error } from '@sveltejs/kit'
 import { getPosts } from '$lib/utils/get-posts'
 import setup from '$lib/settings';
-/*
+
 function shuffle(a) {
     for (let i = a.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [a[i], a[j]] = [a[j], a[i]];
     }
     return a;
-}
-*/
-function shuffleArray(array) {
-	for (let i = array.length - 1; i > 0; i--) {
-		const j = Math.floor(Math.random() * (i + 1));
-		[array[i], array[j]] = [array[j], array[i]]
-	}
 }
 
 export async function load({ params }) {
@@ -24,8 +17,8 @@ export async function load({ params }) {
 		post = { ...post.metadata, content: post.default, slug: params.slug }
     	
 		const Posts = await getPosts()
-		const posts = Posts.filter((post) => !((post.categories.includes("News"))||(post.slug.includes(params.slug))))
-		//shuffleArray(posts)
+		const posts = Posts.filter((post) => !((post.categories.includes("news"))||(post.slug.includes(params.slug))))
+		shuffle(posts)
 		let randomPosts = posts.slice(0,6)
 		
 		const title = post.title

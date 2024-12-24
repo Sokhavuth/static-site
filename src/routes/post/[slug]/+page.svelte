@@ -2,7 +2,6 @@
     import Layout from "$lib/component/Layout.svelte"
     import Video from "$lib/component/Video.svelte"
     let { data } = $props()
-    
     const Categories = {
         news: 'ព័ត៌មាន',
         national: 'ក្នុង​ប្រទេស',
@@ -48,7 +47,7 @@
         <div class="fb-comments" data-href={`https://khmerweb-news.netlify.app/post/${data.post.slug}`} data-width="100%" data-numposts="5"></div>
     </div>
     <div class="sidebar">
-        {#each data.randomPosts as post}
+        {#each data.randomPosts as post, i}
             <a  href="/post/{post.slug}">
                 <img src={post.thumb} alt=''/>
                 {#if post.videos.length>0}
@@ -57,6 +56,7 @@
                 <div class="title">{post.title}</div>
             </a>
         {/each}
+        
     </div>
 
 </section>
