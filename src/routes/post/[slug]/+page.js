@@ -30,7 +30,7 @@ export async function load({ params }) {
 		
 		const title = post.title
 
-		return { post, settings, title }
+		return { post, settings, randomPosts, title }
 	} catch (e) {
 		error(404, `Could not find ${params.slug}`)
 	}
