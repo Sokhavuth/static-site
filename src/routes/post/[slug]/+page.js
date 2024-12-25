@@ -7,7 +7,7 @@ export async function load({ params }) {
 		const settings = setup()
 		let post = await import(`$lib/content/posts/${params.slug}.md`)
 		post = { ...post.metadata, content: post.default, slug: params.slug }
-    	
+    	//
 		const Posts = await getPosts()
 		let posts = []
 		if((post.categories.includes("news")) && !(post.categories.includes("doc"))){
