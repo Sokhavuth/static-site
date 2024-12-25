@@ -10,10 +10,14 @@
             [a[i], a[j]] = [a[j], a[i]];
         }
     }
-    
+
     $effect(() => {
-        shuffle(data.posts)
-        randomPosts = data.posts.slice(0,6)
+        if((data.posts[0].categories.includes("news")) && !(data.posts[0].categories.includes("doc"))){
+            randomPosts = data.posts.slice(0,6)
+        }else{
+            shuffle(data.posts)
+            randomPosts = data.posts.slice(0,6)
+        }
     })
     const Categories = {
         news: 'ព័ត៌មាន',

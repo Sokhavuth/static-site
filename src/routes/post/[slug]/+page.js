@@ -9,7 +9,15 @@ export async function load({ params }) {
 		post = { ...post.metadata, content: post.default, slug: params.slug }
     	
 		const Posts = await getPosts()
-		const posts = Posts.filter((post) => !((post.categories.includes("news"))||(post.slug.includes(params.slug))))
+		let posts = []
+		if((post.categories.includes("news")) && !(post.categories.includes("doc"))){
+			posts = Posts.filter((p) => ((p.categories.includes("news")) && !(p.slug === post.slug ) && !(p.categories.includes("doc"))))
+		}else if(post.categories.includes("doc")){
+			posts = Posts.filter((p) => ((p.categories.includes("doc")) && !(p.slug === post.slug )))
+		}else{
+			posts = Posts.filter((p) => (!(p.categories.includes("news")) && !(p.slug === post.slug )))
+		}
+		
 		
 		const title = post.title
 

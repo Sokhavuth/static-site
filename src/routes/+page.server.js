@@ -2,7 +2,7 @@ import { getPosts } from '$lib/utils/get-posts';
 import setup from '$lib/settings.js'
 
 export async function load() {
-	const posts = await getPosts()
+	const posts = (await getPosts()).slice(0, 21)
 	const count = await posts.length
 	const settings = setup()
 	const pageNumber = Math.ceil(count/settings.frontend)
