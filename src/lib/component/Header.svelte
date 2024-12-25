@@ -7,12 +7,12 @@
     <title>{ data.title }</title>
 </svelte:head>
 
-<link href="/styles/base-frontend.css" rel="stylesheet" />
+<link href="/static-site/styles/base-frontend.css" rel="stylesheet" />
 <section class="header">
     <header class='wrapper region'>
         <div class='logo'>
-            <a href='/'><img src='/images/siteLogo.png' alt='' /></a>
-            <a href='/'>{ data.settings.siteTitle }</a>
+            <a href='/static-site'><img src='/static-site/images/siteLogo.png' alt='' /></a>
+            <a href='/static-site'>{ data.settings.siteTitle }</a>
         </div>
         <form class='search' action="/search?/search" method="post">
             <select name='category'>
@@ -62,9 +62,6 @@
     }
     .wrapper .login{
         text-align: right;
-        color: white;
-    }
-    .wrapper .login a{
         color: white;
     }
 

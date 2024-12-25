@@ -1,6 +1,6 @@
 <section class="Ad region">
-    <img src="/images/ad.jpg" alt=''/>
-    <img src="/images/ad.jpg" alt=''/>
+    <img src="/static-site/images/ad.jpg" alt=''/>
+    <img src="/static-site/images/ad.jpg" alt=''/>
 </section>
 
 <style>

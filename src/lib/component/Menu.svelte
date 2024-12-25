@@ -48,7 +48,7 @@ function myFunction() {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <div class="region">
             <div data-sveltekit-reload class="topnav" class:responsive={isresponsive} id="myTopnav">
-                <a href="/" class={`home ${home}`}>ទំព័រ​ដើម</a>
+                <a href="/static-site" class={`home ${home}`}>ទំព័រ​ដើម</a>
                 <a href="javascript:void(0);" class="icon" onclick={myFunction}>
                     <i class="fa fa-bars"></i>
                 </a>
